@@ -3,9 +3,6 @@ Returns an array of randomized integers
 given some length and maximum element size
 */
 int *RandomizedIntegerArray(int arrayLength, int maxElementSize){
-    // Guard
-    if (arrayLength < 1){return NULL;}
-
     // Alloc
     int *randomizedArray = (int *) malloc(arrayLength * sizeof(int));
 
@@ -21,8 +18,10 @@ int *RandomizedIntegerArray(int arrayLength, int maxElementSize){
 Sort an array using the bubble sort algorithm
 */
 void BubbleSort(int *unsortedArray, int arrayLength){
-    int swapCount;
+    // Guard
+    if (arrayLength <= 1){return;}
 
+    int swapCount;
     do{
         swapCount = 0;
 
@@ -40,6 +39,19 @@ void BubbleSort(int *unsortedArray, int arrayLength){
             }
         }
     }while (swapCount > 0);
+}
+
+/*
+Sort an array using the bubble sort algorithm
+
+I'm too high to learn how to do this rn
+*/
+void QuickSort(int *unsortedArray, int start, int end){
+
+}
+
+void PartitionArray(int *toPartition, int start, int end){
+
 }
 
 
