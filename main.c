@@ -18,18 +18,20 @@ int main(){
 
     // Store and display sorted list
     int *p_array = RandomizedIntegerArray(length, max);
-    BubbleSort(p_array, length);
+    QuickSort(p_array, 0, length - 1);
 
     printf("\nSorted Array: ");
     for (int i = 0; i < length; i++){
         printf("%i ", *(p_array + i));
     }
+    
+    CheckSorted(p_array, length);
 
     // Search for a given element
     printf("\nElement to Search: ");
     scanf("%i", &search);
 
-    BinarySearch(p_array, search, 0, length - 1);
+    int found = BinarySearch(p_array, search, 0, length - 1);
     
     free(p_array);
     return 0;
